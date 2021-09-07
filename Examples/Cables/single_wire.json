@@ -1,0 +1,22 @@
+{
+	"conductors":
+	[
+		{
+			"name": "Left Cond",
+			"pos": [-2,3],
+			"diam": 2.0,
+			"units": "mm"
+		},
+		{
+			"name": "Left Cond",
+			"pos": [2,3],
+			"diam": 2.0,
+			"units": "mm"
+		}
+	],
+	
+	"mesh":
+	{
+		"min-div": 32
+	}
+}

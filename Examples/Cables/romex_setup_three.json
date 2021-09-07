@@ -1,0 +1,28 @@
+{
+	"conductors":
+	[
+		{
+			"name": "Left Cond",
+			"pos": [-3.018, 15.5],
+			"diam": 2.05,
+			"units": "mm"
+		},
+		{
+			"name": "Center Cond",
+			"pos": [0, 15.5],
+			"diam": 2.05,
+			"units": "mm"
+		},
+		{
+			"name": "Right Cond",
+			"pos": [3.018, 15.5],
+			"diam": 2.05,
+			"units": "mm"
+		}
+	],
+	
+	"mesh":
+	{
+		"min-div": 16
+	}
+}
