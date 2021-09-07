@@ -1,8 +1,8 @@
 from numpy import *
 import matplotlib.pyplot as plt
-from mom_2d_capacitance import *
+from PyCoupling.mom_2d_capacitance import *
 import argparse
-
+ 
 def test_kernel_flat(mode="single-gp"):
     N = 101
     size = 3
@@ -44,15 +44,16 @@ def test_kernel_flat(mode="single-gp"):
 if __name__ == "__main__":
     #
     parser = argparse.ArgumentParser("mom_2d_capacitance.py - Test Bench")
-    parser.add_argument("mode", help="Ploting modes: single, square, single-gp, square-gp", type=str)
+    parser.add_argument("--cable", help="Cable selection", type=str, default="romex_setup_three")
+    parser.add_argument("--plot", help="Plot solution: True/False", type=bool, default=False)
     args = parser.parse_args()
 
     # Test bench
-    struc = generate_struct_obj("romex_setup_three.json")
+    struc = generate_struct_obj("Cables/{}.json".format(args.cable))
     print(struc["conductors"])
     
-    print("Mode: " + args.mode)
-    test_kernel_flat(mode=args.mode)
+    #print("Mode: " + args.mode)
+    #test_kernel_flat(mode=args.mode)
     
     Y, Y_inv, seg_struc = generate_Y_matrix(struc)
     print("\n\nY matrix:")
@@ -61,7 +62,7 @@ if __name__ == "__main__":
     V_bc = zeros([len(struc["conductors"])])
     V_bc[0] = 1
     #V_bc[1] = 1
-    Q = calc_Q(struc, Y_inv, seg_struc, V_bc, plot=False)
+    Q = calc_Q(struc, Y_inv, seg_struc, V_bc, plot=args.plot)
     print("\n\nQ Sim:")
     print(Q)
     

@@ -1,0 +1,22 @@
+{
+	"conductors":
+	[
+		{
+			"name": "Interial Cond",
+			"pos": [0,10],
+			"diam": 2.0,
+			"units": "mm"
+		},
+		{
+			"name": "Shield Cond",
+			"pos": [0,10],
+			"diam": 4.0,
+			"units": "mm"
+		}
+	],
+	
+	"mesh":
+	{
+		"min-div": 32
+	}
+}
