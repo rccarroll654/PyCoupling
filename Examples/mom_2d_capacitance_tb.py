@@ -1,6 +1,6 @@
 from numpy import *
 import matplotlib.pyplot as plt
-from PyCoupling.mom_2d_capacitance import *
+from PyCpl.mom_2d_capacitance import *
 import argparse
  
 def test_kernel_flat(mode="single-gp"):

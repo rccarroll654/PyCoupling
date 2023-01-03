@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: PyCpl
+Version: 0.0.1
+Summary: A cable coupling and crosstalk tool
+Home-page: https://github.com/rccarroll654/PyCoupling
+Author: Russell Carroll
+Author-email: russell_carroll@carrelec.com
+Project-URL: Bug Tracker, https://github.com/rccarroll654/PyCoupling
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PyCoupling
+
+This is a python package used for calulating cable coupling and cross talk.
+
